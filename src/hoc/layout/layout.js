@@ -11,6 +11,8 @@ export default class Layout extends Component {
     }
 
     sideDrawerClosedHandler = () => {
+        console.log("hell");
+        
         this.setState( { showSideDrawer: false } );
     }
 
@@ -23,7 +25,7 @@ export default class Layout extends Component {
     render () {
         return (
        <div>
-                <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} />
+                <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler}  closed={this.sideDrawerClosedHandler}/>
                 <SideDrawer
                     open={this.state.showSideDrawer}
                     closed={this.sideDrawerClosedHandler} />
